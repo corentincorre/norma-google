@@ -1,0 +1,45 @@
+.users__container {
+
+    table {
+        width: 100%;
+        margin: 2rem 0;
+        border: 1px solid #e8e8e8;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 5px;
+    }
+
+    th {
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+
+    table,
+    th,
+    td {
+        border-collapse: collapse;
+        font-size: 2rem;
+        font-family: $primary-family;
+    }
+
+    th:last-of-type,
+    td:last-of-type {
+        text-align: right;
+    }
+
+    th,
+    td {
+        padding: 20px 10px;
+        text-align: left;
+    }
+
+    thead tr {
+        background-color: #e8e8e8;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid #e8e8e8;
+    }
+}

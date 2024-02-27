@@ -1,0 +1,32 @@
+.events-list {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.events-list .event {
+    list-style: none;
+}
+
+.events-archived {
+    filter: grayscale(1);
+}
+
+.archived-banner {
+    background-color: #191919;
+    padding: 1rem;
+    color: $yellow;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .events-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+}

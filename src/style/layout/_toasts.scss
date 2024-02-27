@@ -1,0 +1,18 @@
+._toastItem {
+    font-size: 1.4rem;
+    width: 350px !important;
+    height: 80px !important;
+    padding: 0.5rem !important;
+}
+
+._toastBtn  {
+    padding-top: 0.5rem !important
+}
+
+._toastContainer {
+    top: var(--toastContainerTop, 1.5rem);
+    right: var(--toastContainerRight, 2rem);
+    bottom: var(--toastContainerBottom, auto);
+    left: var(--toastContainerLeft, auto);
+    padding: 0.5rem !important;
+}

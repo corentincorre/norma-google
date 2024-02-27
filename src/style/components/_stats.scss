@@ -1,0 +1,32 @@
+.fake-chart {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 2rem;
+    margin-top: 0rem;
+    display: flex;
+    justify-content: space-between;
+    .stat-wrapper {
+        margin-bottom: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: $primary-family;
+        margin-bottom: 1rem;
+    }
+    li {
+        list-style: disc;
+        margin-left: 20px;
+        margin-bottom: 1rem;
+
+    }
+
+    p {
+        &::before {
+            content: '•';
+            margin-right: 10px;
+        }
+        margin-bottom: 1rem;
+    }
+}

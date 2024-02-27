@@ -1,0 +1,55 @@
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 10;
+    background: white;
+
+    .container {
+        padding: 0 2rem;
+        height: 100%;
+    }
+
+    .btn__container {
+        margin-top: 0;
+        display: flex;
+        gap: 1rem;
+
+        .btn {
+            background-color: $yellow;
+            border: none;
+            padding: 9px 30px;
+            width: auto;
+            border-radius: 20px;
+            color: $white;
+            cursor: pointer;
+            font-size: 1.4rem;
+            line-height: calc(1.4rem * 1.4);
+            font-family: $primary-family;
+            text-align: center;
+
+            &:hover {
+                background-color: $black;
+            }
+        }
+    }
+}
+
+.header__logo {
+    img {
+        width: 6rem;
+    }
+}
+
+.activLink {
+    background-color: #2a799e;
+
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
