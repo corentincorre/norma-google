@@ -29,7 +29,7 @@
 </script>
 
 <div class="header-container">
-	<h1>Les événements actuels test</h1>
+	<h1>Les événements actuels</h1>
 </div>
 
 <ul class="events-list">
