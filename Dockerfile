@@ -5,7 +5,6 @@ WORKDIR /app
 # COPY src /app/src
 # COPY .svelte-kit /app/.svelte-kit 
 COPY . /app
-COPY .env .env
 RUN npm ci
 RUN npm run build
 RUN npm prune --production
