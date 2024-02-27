@@ -1,4 +1,12 @@
 FROM node:18-alpine AS builder
+ENV HELLOASSO_CLIENT_ID = "xxx"
+ENV HELLOASSO_SECRET_ID = "xxx"
+ENV PUBLIC_SUPABASE_URL="xxx"
+ENV PUBLIC_SUPABASE_ANON_KEY="xxx"
+ENV PUBLIC_CONTACT_TEMPLATE_ID="xxx"
+ENV PUBLIC_EMAILJS_KEY="xxx"
+ENV PUBLIC_SERVICE_ID="xxx"
+ENV PUBLIC_REGISTER_TEMPLATE_ID="xxx"
 WORKDIR /app
 # COPY package.json /app/package.json
 # COPY package-lock.json /app/package-lock.json
