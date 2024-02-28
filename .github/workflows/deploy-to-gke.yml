@@ -32,4 +32,5 @@ jobs:
         gcloud config set project ${{ secrets.GKE_PROJECT }}
         gcloud config set log_http_redact_token false
         gcloud container clusters get-credentials ${{ secrets.GKE_CLUSTER }} --zone ${{ secrets.GKE_ZONE }} --project ${{ secrets.GKE_PROJECT }}
+        gcloud components install gke-gcloud-auth-plugin
         kubectl apply -f kubernetes/
