@@ -25,13 +25,11 @@ jobs:
     - name: Push Docker image to Google Container Registry
       run: |
         docker push gcr.io/${{ secrets.GKE_PROJECT }}/norma:${{ github.sha }}
-    - name: Get GKE credentials
+    - name: Get GKE credentials and deploy
       run: |
         echo '${{ secrets.GKE_SA_KEY }}' > gcloud-service-key.json # Save Google cloud contents in a temporary json file
         gcloud auth activate-service-account --key-file=gcloud-service-key.json # Activate your service account
         gcloud config set project ${{ secrets.GKE_PROJECT }}
         gcloud config set log_http_redact_token false
         gcloud container clusters get-credentials ${{ secrets.GKE_CLUSTER }} --zone ${{ secrets.GKE_ZONE }} --project ${{ secrets.GKE_PROJECT }}
-    - name: Deploy to Google Kubernetes Engine
-      run: |
         kubectl apply -f kubernetes/
