@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: web
+  template:
+    metadata:
+      labels:
+        run: web
+    spec:
+      containers:
+      - image: gcr.io/cours-415509/norma:latest
+        imagePullPolicy: IfNotPresent       
+        name: web
+        ports:
+        - containerPort: 5173
+          protocol: TCP
+      imagePullSecrets:
+      - name: regsecret           
